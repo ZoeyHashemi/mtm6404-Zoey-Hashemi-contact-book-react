@@ -1,22 +1,232 @@
-/* Home.css */
-
-.search-bar {
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact-list {
-  list-style-type: none;
+/* General Reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.contact-list li {
-  margin: 10px 0;
-  font-size: 18px;
-  color: #333;
+/* Global Variables */
+:root {
+  --dark-moss-green: #606c38ff;
+  --pakistan-green: #283618ff;
+  --cornsilk: #fefae0ff;
+  --earth-yellow: #dda15eff;
+  --tigers-eye: #bc6c25ff;
+
+  --heading-font: 'times new Romans', serif;
+  --body-font: 'Lato', sans-serif;
 }
 
+/* Global Body Styles */
+body {
+  font-family: var(--body-font)!important;
+  color: var(--pakistan-green);
+  background-color: var(--cornsilk);
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+.navbar.custom-navbar {
+  background-color: var(--pakistan-green) !important;
+  color: var(--cornsilk) !important;
+  font-family: var(--heading-font) !important;
+}
+
+
+.navbar a {
+  color: var(--cornsilk);
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.navbar a:hover {
+  color: var(--earth-yellow);
+}
+
+.navbar .btn {
+  background-color: var(--earth-yellow) ;
+  color: var(--pakistan-green);
+  border: none;
+}
+
+.navbar .btn:hover {
+  background-color: var(--tigers-eye);
+  color: var(--cornsilk);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: var(--cornsilk);
+  font-family: var(--heading-font);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: var(--dark-moss-green);
+  color: var(--cornsilk);
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.table th.sortable:hover {
+  text-decoration: underline;
+}
+
+.table td {
+  padding: 10px;
+  border: 1px solid var(--dark-moss-green);
+}
+
+.table tbody tr:hover {
+  background-color: var(--earth-yellow);
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--body-font);
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--earth-yellow) !important;
+  color: var(--pakistan-green)!important;
+}
+
+.btn-primary:hover {
+  background-color: var(--tigers-eye)!important;
+  color: var(--cornsilk)!important;
+}
+
+.btn-danger {
+  background-color: var(--tigers-eye)!important;
+  color: var(--cornsilk)!important;
+}
+
+.btn-danger:hover {
+  background-color: var(--pakistan-green)!important;
+  color: var(--cornsilk)!important;
+}
+
+.btn-secondary {
+  background-color: var(--dark-moss-green)!important;
+  color: var(--cornsilk)!important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--pakistan-green)!important;
+  color: var(--earth-yellow)!important;
+}
+.not-found {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin between image and text */
+  font-family: var(--body-font);
+  color: var(--dark-moss-green);
+}
+
+.not-found img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Reduce space below the image */
+}
+
+.not-found h1 {
+  font-size: 5rem;
+  font-family: var(--heading-font);
+  color: var(--tigers-eye);
+  margin: 0; 
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  color: var(--dark-moss-green);
+  margin-bottom: 20px;
+}
+
+.not-found .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: var(--tigers-eye);
+  color: var(--cornsilk);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.not-found .btn:hover {
+  background-color: var(--earth-yellow);
+  color: var(--pakistan-green);
+}
+
+
+
+/* Footer */
+.footer.custom-footer {
+  background-color: var(--pakistan-green) !important;
+  color: var(--cornsilk);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--earth-yellow);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+  }
+}

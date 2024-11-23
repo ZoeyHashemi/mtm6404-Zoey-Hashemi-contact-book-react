@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-light text-center mt-4 p-4">
+    <footer className="footer bg-light text-center mt-4 p-4 custom-footer">
       <p>
         &copy; 2024 Contact Book Application By Zoey Hashemi.<br />
         All rights reserved. Images provided by{" "}
@@ -16,9 +16,9 @@ const Footer = () => {
         </a>
       </p>
       <div>
-        <a href="/privacy-policy" className="footer-link">Privacy Policy</a> |{" "}
-        <a href="/terms-of-service" className="footer-link">Terms of Service</a> |{" "}
-        <a href="/contact-us" className="footer-link">Contact Us</a>
+        <a href="/notfound" className="footer-link">Privacy Policy</a> |{" "}
+        <a href="/notfound" className="footer-link">Terms of Service</a> |{" "}
+        <a href="/comingsoon" className="footer-link">Contact Us</a>
       </div>
     </footer>
   );

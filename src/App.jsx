@@ -4,9 +4,12 @@ import Home from "./components/home";
 import ContactDetails from "./components/ContactDetails";
 import AddContact from "./components/AddContact";
 import EditContact from "./components/EditContact";
+import NotFound from "./components/NotFound";
+import ComingSoon from "./components/ComingSoon";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/FooterTemp";
+import './App.css';
 
 
 function App() {
@@ -22,6 +25,8 @@ function App() {
           <Route path="/add" element={<AddContact />} />
           <Route path="/contact/:id" element={<ContactDetails />} />
           <Route path="/edit/:id" element={<EditContact />} /> 
+          <Route path="/help" element={<ComingSoon />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>

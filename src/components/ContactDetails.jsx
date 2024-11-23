@@ -66,11 +66,7 @@ const ContactDetails = () => {
     <div className="contact-detail-view container mt-5">
       <h2 className="text-center mb-4">Contact Details</h2>
       <div className="contact-detail-content text-center">
-        <img
-          src="/src/assets/images/contact-information.png"
-          alt="Contact Information"
-          className="img-fluid mb-4"
-        />
+        
         <div className="contact-info">
           <p>
             <strong>Name:</strong> {contact.firstName} {contact.lastName}
@@ -89,7 +85,7 @@ const ContactDetails = () => {
       <div className="d-flex justify-content-center mt-4">
         {/* Edit Contact Button */}
         <button
-          className="btn btn-primary me-2"
+          className="btn btn-primary me-2 edit-button-detail"
           onClick={() => navigate(`/edit/${id}`)}
         >
           Edit Contact
