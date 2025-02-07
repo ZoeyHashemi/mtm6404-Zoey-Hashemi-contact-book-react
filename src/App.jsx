@@ -6,7 +6,7 @@ import AddContact from "./components/AddContact";
 import EditContact from "./components/EditContact";
 import NotFound from "./components/NotFound";
 import ComingSoon from "./components/ComingSoon";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/FooterTemp";
 import './App.css';
